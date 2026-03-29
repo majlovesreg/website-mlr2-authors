@@ -1,17 +1,16 @@
-# AUTHOR GUIDE
+# TEMPLATE AND AUTHOR GUIDE
 
-This guide is for authors of [www.majlovesreg.one](https://www.majlovesreg.one)
+This guide and template is for authors of [www.majlovesreg.one](https://www.majlovesreg.one).
 
 ## Table of Contents
 
 - [Step 1: Create a GitHub account](#step-1-create-a-github-account)
 - [Step 2: Create your author repository](#step-2-create-your-author-repository)
 - [Step 3: Create a blog post](#step-3-create-a-blog-post)
-- [Step 4: Save (commit) your changes](#step-4-save-commit-your-changes)
-- [Step 5: Ask a maintainer to connect your repo](#step-5-ask-majlovesregone-to-connect-your-repo)
+- [Step 4: Ask a maintainer to connect your repo](#step-4-ask-majlovesregone-to-connect-your-repo)
 - [Examples](#examples)
+- [Checklist](#checklist)
 - [Troubleshooting](#troubleshooting)
-- [Done Checklist](#done-checklist)
 
 ## Step 1: Create a GitHub account
 
@@ -30,21 +29,12 @@ If you already have an account, continue to Step 2.
 
 ## Step 3: Create a blog post
 
-1. Create a folder for the post, for example: `2026-03-28-my-first-post`
-2. Inside that folder, create `index.md`.
-3. Add your frontmatter and content. See [example](#example-blog-post-indexmd)
+1. Create a folder for the post, for example: `yyyy-mm-dd-my-first-post`
+2. Inside that folder, create `index.md`
+3. Ask majlovesreg.one admins for your author slug
+4. Add your frontmatter and content. See [example](#example-blog-post-indexmd)
 
-## Step 4: Save (commit) your changes
-
-On GitHub web editor:
-
-1. Click the pencil icon to edit.
-2. Make your changes.
-3. Scroll down.
-4. Add a short commit message.
-5. Click **Commit changes**.
-
-## Step 5: Ask majlovesreg.one to connect your repo
+## Step 4: Ask majlovesreg.one to connect your repo
 
 Provide your GitHub repository address to majlovesreg.one
 
@@ -75,7 +65,7 @@ title: "My First Post"
 description: "A short summary of this post."
 pubDate: 2026-03-28
 author:
-  - your-slug
+  - your-author-slug
 category: thoughts
 tags:
   - personal
@@ -92,10 +82,10 @@ Hello! This is my first post.
 Notes:
 
 - `title`, `description`, and `pubDate` are required.
-- `author` uses author slugs (not full names).
+- `author` uses your author slug (not full name). Ask majlovesreg.one admins for your author slug
 - Keep images in the same post folder and use relative paths like `./cover.jpg`.
 
-## Done Checklist
+## Checklist
 
 - GitHub account created
 - Author repository created
@@ -109,3 +99,7 @@ Notes:
 ### I pushed changes but site did not update yet
 
 GitHub will check your repository every hour (on the hour). If you have new content in your repo, it will be picked up for publishing. Check at around five minutes after the hour to see new content on the site.
+
+### I need more help
+
+Contact majlovesreg.one admins
