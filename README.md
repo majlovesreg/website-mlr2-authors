@@ -47,7 +47,7 @@ If your repository is **private**: You must generate a secure API key so the maj
 5. **Repository access:** Select **Only select repositories**, then choose your author repository.
 6. **Permissions:** Under **Repository permissions**, find **Contents** and set it to **Read-only**. (Leave everything else as `No access`).
 7. Click **Generate token** at the bottom, and copy the `github_pat_...` string.
-8. Securely share this token **AND** your repository link to majlovesreg.one admins.
+8. Securely share this **token** and your **repository link** to majlovesreg.one admins.
 
 ## Examples
 
@@ -103,7 +103,7 @@ Notes:
 - `author-profile.md` updated
 - Create a post folder with `index.md` inside it
 - Changes committed
-- Inform site owner of your repo address
+- Inform site owner of your repository address. If your repo is private, include your generated API token as well
 
 ## Troubleshooting
 
