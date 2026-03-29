@@ -7,7 +7,7 @@ This guide and template is for authors of [www.majlovesreg.one](https://www.majl
 - [Step 1: Create a GitHub account](#step-1-create-a-github-account)
 - [Step 2: Create your author repository](#step-2-create-your-author-repository)
 - [Step 3: Create a blog post](#step-3-create-a-blog-post)
-- [Step 4: Ask a maintainer to connect your repo](#step-4-ask-majlovesregone-to-connect-your-repo)
+- [Step 4: Ask majlovesreg.one admins to connect your repo](#step-4-ask-majlovesregone-admins-to-connect-your-repo)
 - [Examples](#examples)
 - [Checklist](#checklist)
 - [Troubleshooting](#troubleshooting)
@@ -34,9 +34,10 @@ If you already have an account, continue to Step 2.
 3. Ask majlovesreg.one admins for your author slug
 4. Add your frontmatter and content. See [example](#example-blog-post-indexmd)
 
-## Step 4: Ask majlovesreg.one to connect your repo
+## Step 4: Ask majlovesreg.one admins to connect your repo
 
-Provide your GitHub repository address to majlovesreg.one admins.
+**If your repository is public:**
+Simply provide your GitHub repository address to majlovesreg.one admins.
 
 **If your repository is private:**
 You must generate a secure API key so the main site can securely read your posts. DO NOT give admin access to your account or repository! Create a "Read-only" Fine-grained token.
