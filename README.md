@@ -43,11 +43,30 @@ If your repository is **private**: You must generate a secure API key so the maj
 1. Go to your GitHub **Settings** -> **Developer settings** -> **Personal access tokens** -> **Fine-grained tokens**.
 2. Click **Generate new token**.
 3. Select a memorable **token name** (e.g. `Access for majlovesreg.one`)
-4. You may choose to not set an **expiration** date, or set it to a shorter time frame, like 1 year. Just set a reminder to renew it when it expires.
+4. You may choose to not set an **expiration** date, or set it to a shorter time frame, like 1 year. Just set a reminder to renew it when it is about to expire, and send the new token to majlovesreg.one admins.
 5. **Repository access:** Select **Only select repositories**, then choose your author repository.
 6. **Permissions:** Under **Repository permissions**, find **Contents** and set it to **Read-only**. (Leave everything else as `No access`).
 7. Click **Generate token** at the bottom, and copy the `github_pat_...` string.
 8. Securely share this **token** and your **repository link** to majlovesreg.one admins.
+
+## Checklist
+
+- GitHub account created
+- Author repository created
+- `author-profile.md` updated
+- Create a post folder with `index.md` inside it
+- Changes committed
+- Inform site owner of your repository address. If your repo is private, include your generated API token as well
+
+## Troubleshooting
+
+### I pushed changes but site did not update yet
+
+GitHub will check your repository every hour (on the hour). If you have new content in your repo, it will be picked up for publishing. Check at around five minutes after the hour to see new content on the site.
+
+### I need more help
+
+Contact majlovesreg.one admins
 
 ## Examples
 
@@ -95,22 +114,3 @@ Notes:
 - `title`, `description`, and `pubDate` are required.
 - `author` uses your author slug (not full name). Ask majlovesreg.one admins for your author slug
 - Keep images in the same post folder and use relative paths like `./cover.jpg`.
-
-## Checklist
-
-- GitHub account created
-- Author repository created
-- `author-profile.md` updated
-- Create a post folder with `index.md` inside it
-- Changes committed
-- Inform site owner of your repository address. If your repo is private, include your generated API token as well
-
-## Troubleshooting
-
-### I pushed changes but site did not update yet
-
-GitHub will check your repository every hour (on the hour). If you have new content in your repo, it will be picked up for publishing. Check at around five minutes after the hour to see new content on the site.
-
-### I need more help
-
-Contact majlovesreg.one admins
