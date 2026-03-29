@@ -1,6 +1,10 @@
-# TEMPLATE AND AUTHOR GUIDE
+# Template and Author Guide
 
-This guide and template is for authors of [www.majlovesreg.one](https://www.majlovesreg.one).
+This guide and template is for authors of [www.majlovesreg.one](https://www.majlovesreg.one). Authoring uses the Markdown (MD) format. Learn more about MD and related technologies here:
+- [What is Markdown?](https://www.markdownguide.org/getting-started/)
+- [Basic Markdown Syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+- Advanced: [MDX](https://docs.astro.build/en/guides/integrations-guide/mdx/)
+- Advanced: [Content Management Systems](https://jamstack.org/headless-cms/) and their [Astro integrations](https://docs.astro.build/en/guides/cms/)
 
 ## Table of Contents
 
@@ -32,7 +36,7 @@ If you already have an account, continue to Step 2.
 1. Create a folder for the post, for example: `yyyy-mm-dd-my-first-post`
 2. Inside that folder, create `index.md`
 3. Ask majlovesreg.one admins for your author slug
-4. Add your frontmatter and content. See [example](#example-blog-post-indexmd)
+4. Add your [frontmatter](https://docs.astro.build/en/guides/markdown-content/) (aka settings) and content. See [example](#example-blog-post-indexmd)
 
 ## Step 4: Ask majlovesreg.one admins to connect your repo
 
