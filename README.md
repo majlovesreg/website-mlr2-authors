@@ -8,7 +8,7 @@ This guide is for authors of [www.majlovesreg.one](https://www.majlovesreg.one)
 - [Step 2: Create your author repository](#step-2-create-your-author-repository)
 - [Step 3: Create a blog post](#step-3-create-a-blog-post)
 - [Step 4: Save (commit) your changes](#step-4-save-commit-your-changes)
-- [Step 5: Ask a maintainer to connect your repo](#step-5-ask-a-maintainer-to-connect-your-repo)
+- [Step 5: Ask a maintainer to connect your repo](#step-5-ask-majlovesregone-to-connect-your-repo)
 - [Examples](#examples)
 - [Troubleshooting](#troubleshooting)
 - [Done Checklist](#done-checklist)
@@ -26,7 +26,7 @@ If you already have an account, continue to Step 2.
 
 1. Create new repository from template at [https://github.com/majlovesreg/website-mlr2-authors](https://github.com/majlovesreg/website-mlr2-authors)
 2. Click `Use this template` > `Create a new repository`
-3. In your new repo, edit `author-profile.md`. See [examples](#example-author-profilemd)
+3. In your new repo, edit `author-profile.md`. See [example](#example-author-profilemd)
 
 ## Step 3: Create a blog post
 
