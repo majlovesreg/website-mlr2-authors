@@ -36,20 +36,18 @@ If you already have an account, continue to Step 2.
 
 ## Step 4: Ask majlovesreg.one admins to connect your repo
 
-**If your repository is public:**
-Simply provide your GitHub repository address to majlovesreg.one admins.
+If your repository is **public**: Simply provide your GitHub repository address to majlovesreg.one admins.
 
-**If your repository is private:**
-You must generate a secure API key so the main site can securely read your posts. DO NOT give admin access to your account or repository! Create a "Read-only" Fine-grained token.
+If your repository is **private**: You must generate a secure API key so the majlovesreg.one can read your posts. Do not give admin access to your account or repository! Create a "Read-only" Fine-grained token.
 
 1. Go to your GitHub **Settings** -> **Developer settings** -> **Personal access tokens** -> **Fine-grained tokens**.
 2. Click **Generate new token**.
-3. **Token name:** `website-mlr2-sync`
-4. **Expiration:** Set to 1 year (you will need to renew it when it expires).
+3. Select a memorable **token name** (e.g. `Access for majlovesreg.one`)
+4. You may choose to not set an **expiration** date, or set it to a shorter time frame, like 1 year. Just set a reminder to renew it when it expires.
 5. **Repository access:** Select **Only select repositories**, then choose your author repository.
 6. **Permissions:** Under **Repository permissions**, find **Contents** and set it to **Read-only**. (Leave everything else as `No access`).
 7. Click **Generate token** at the bottom, and copy the `github_pat_...` string.
-8. Securely share this token **AND** your repository link with the majlovesreg.one admins.
+8. Securely share this token **AND** your repository link to majlovesreg.one admins.
 
 ## Examples
 
