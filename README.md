@@ -39,6 +39,8 @@ If you already have an account, continue to Step 2.
 4. Upload the images you want to use in the post to the same folder as [`index.md`](yyyy-mm-dd-my-first-post/index.md)
 5. If you set `draft: true` on your frontmatter, you will be able to preview your post on [next.majlovesreg.one](https://next.majlovesreg.one) before it goes live on the main site [www.majlovesreg.one](https://www.majlovesreg.one)
 
+**Pro tip:** You can first write your content on a proper editor, like Google Docs, then copy it as markdown to be pasted on your `index.md`
+
 ## Step 4: Ask majlovesreg.one admins to connect your repo
 
 If your repository is **public**: Simply provide your GitHub repository address to majlovesreg.one admins.
