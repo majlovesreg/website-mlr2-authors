@@ -29,14 +29,14 @@ If you already have an account, continue to Step 2.
 
 1. Create new repository from template at [https://github.com/majlovesreg/website-mlr2-authors](https://github.com/majlovesreg/website-mlr2-authors)
 2. Click `Use this template` > `Create a new repository`
-3. In your new repo, edit `author-profile.md`. See [example](#example-author-profilemd)
+3. In your new repo, edit [`author-profile.md`](author-profile.md). See [example](#example-author-profilemd)
 
 ## Step 3: Create a blog post
 
 1. Create a folder for the post, for example: `yyyy-mm-dd-my-first-post`
 2. Inside that folder, create [`index.md`](yyyy-mm-dd-my-first-post/index.md)
 3. Add your [frontmatter](https://docs.astro.build/en/guides/markdown-content/) (aka settings) and content. See [example](#example-blog-post-indexmd)
-4. Upload the images you want to use in the post to the same folder as `index.md`
+4. Upload the images you want to use in the post to the same folder as [`index.md`](yyyy-mm-dd-my-first-post/index.md)
 
 ## Step 4: Ask majlovesreg.one admins to connect your repo
 
@@ -57,8 +57,8 @@ If your repository is **private**: You must generate a secure API key so the maj
 
 - GitHub account created
 - Author repository created
-- `author-profile.md` updated
-- Create a post folder with `index.md` inside it
+- [`author-profile.md`](author-profile.md) updated
+- Create a post folder with [`index.md`](yyyy-mm-dd-my-first-post/index.md) inside it
 - Changes committed
 - Inform site owner of your repository address. If your repo is private, include your generated API token as well
 
@@ -74,7 +74,7 @@ Contact majlovesreg.one admins
 
 ## Examples
 
-### Example `author-profile.md`
+### Example [`author-profile.md`](author-profile.md)
 
 ```md
 ---
@@ -91,7 +91,7 @@ links:
 Hello, I am an author. This is my longer bio.
 ```
 
-### Example blog post `index.md`
+### Example blog post [`index.md`](yyyy-mm-dd-my-first-post/index.md)
 
 ```md
 ---
