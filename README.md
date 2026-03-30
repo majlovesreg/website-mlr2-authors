@@ -44,7 +44,7 @@ If your repository is **public**: Simply provide your GitHub repository address 
 
 If your repository is **private**: You must generate a secure API key so the majlovesreg.one can read your posts. Do not give admin access to your account or repository! Create a "Read-only" Fine-grained token.
 
-1. Go to your GitHub **Settings** -> **Developer settings** -> **Personal access tokens** -> **Fine-grained tokens**.
+1. Go to your GitHub **Settings** -> **Developer settings** -> **Personal access tokens** -> [**Fine-grained tokens**](https://github.com/settings/personal-access-tokens).
 2. Click **Generate new token**.
 3. Select a memorable **token name** (e.g. `Access for majlovesreg.one`)
 4. You may choose to not set an **expiration** date, or set it to a shorter time frame, like 1 year. Just set a reminder to renew it when it is about to expire, and send the new token to majlovesreg.one admins.
