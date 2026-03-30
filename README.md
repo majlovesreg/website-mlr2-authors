@@ -37,6 +37,7 @@ If you already have an account, continue to Step 2.
 2. Inside that folder, create [`index.md`](yyyy-mm-dd-my-first-post/index.md)
 3. Add your [frontmatter](https://docs.astro.build/en/guides/markdown-content/) (aka settings) and content. See [example](#example-blog-post-indexmd)
 4. Upload the images you want to use in the post to the same folder as [`index.md`](yyyy-mm-dd-my-first-post/index.md)
+5. If you set `draft: true` on your frontmatter, you will be able to preview your post on [next.majlovesreg.one](https://next.majlovesreg.one) before it goes live on the main site [www.majlovesreg.one](https://www.majlovesreg.one)
 
 ## Step 4: Ask majlovesreg.one admins to connect your repo
 
@@ -49,7 +50,7 @@ If your repository is **private**: You must generate a secure API key so the maj
 3. Select a memorable **token name** (e.g. `Access for majlovesreg.one`)
 4. You may choose to not set an **expiration** date, or set it to a shorter time frame, like 1 year. Just set a reminder to renew it when it is about to expire, and send the new token to majlovesreg.one admins.
 5. **Repository access:** Select **Only select repositories**, then choose your author repository.
-6. **Permissions:** Under **Repository permissions**, find **Contents** and set it to **Read-only**. (Leave everything else as `No access`).
+6. **Permissions:** Under **Repository permissions**, find **Contents** and set it to **Read-only**. (It will also automatically add `Metadata` read-only permission).
 7. Click **Generate token** at the bottom, and copy the `github_pat_...` string.
 8. Securely share this **token** and your **repository link** to majlovesreg.one admins.
 
