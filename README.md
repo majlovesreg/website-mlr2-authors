@@ -12,9 +12,11 @@ This guide and template is for authors of [www.majlovesreg.one](https://www.majl
 - [Step 2: Create your author repository](#step-2-create-your-author-repository)
 - [Step 3: Create a blog post](#step-3-create-a-blog-post)
 - [Step 4: Ask majlovesreg.one admins to connect your repo](#step-4-ask-majlovesregone-admins-to-connect-your-repo)
-- [Examples](#examples)
 - [Checklist](#checklist)
 - [Troubleshooting](#troubleshooting)
+- [Examples](#examples)
+- [Frontmatter Reference](#frontmatter-reference)
+- [Advanced](#advanced)
 
 ## Step 1: Create a GitHub account
 
@@ -69,7 +71,7 @@ If your repository is **private**: You must generate a secure API key so the maj
 
 ### I pushed changes but site did not update yet
 
-GitHub will check your repository every hour (on the hour). If you have new content in your repo, it will be picked up for publishing. Check at around five minutes after the hour to see new content on the site.
+GitHub will [try to check](https://github.com/orgs/community/discussions/147369) your repository every hour. If you have new content in your repo, it will be picked up for publishing. Check back in an hour or so. If it is `draft: true`, you will see it at [next.majlovesreg.one](https://next.majlovesreg.one).
 
 ### I need more help
 
@@ -121,3 +123,178 @@ Notes:
 - `title`, `description`, and `pubDate` are required.
 - `author` uses your author slug (not full name). Your personal slug will be created for you by majlovesreg.one admins, ask them about it.
 - Keep images in the same post folder and use relative paths like `./cover.jpg`.
+
+## Frontmatter Reference
+
+All blog posts and pages use YAML frontmatter (the metadata section at the top between `---` markers). Here are all available fields:
+
+### Required Fields
+
+- **`title`** (string): The title of your post or page. This appears in the browser tab, search results, and at the top of the page.
+- **`description`** (string): A short summary (1-2 sentences). Used in previews and social sharing.
+- **`pubDate`** (date): Publication date in `YYYY-MM-DD` format, e.g., `2026-03-28`.
+
+### Optional Common Fields
+
+- **`subtitle`** (string): A secondary headline shown below the title (blog posts only).
+- **`ogTitle`** (string): Custom title for social media sharing. Defaults to the title or `title—subtitle`.
+- **`ogDescription`** (string): Custom description for social media sharing. Defaults to description.
+
+### Content Organization
+
+- **`category`** (string): Blog category. Posts without a category appear under "entropy". Examples: `thoughts`, `life`, `love`.
+- **`tags`** (array of strings): List of tags for filtering and discovery. Example: `tags: [personal, travel, tech]`.
+- **`author`** (string or array): Author slug(s). Matches your author profile. Example: `author: maj` or `author: [maj, reg]`.
+
+### Content Control
+
+- **`draft`** (boolean, default: `false`): When `true`, the post/page only appears on the preview site ([next.majlovesreg.one](https://next.majlovesreg.one)), not the main site. Useful for work-in-progress.
+- **`unlisted`** (boolean, default: `false`): Post/page doesn't appear in listings, searches, or social sharing, but remains publicly accessible via direct link. Useful for occasional one-off content.
+- **`accessGroup`** (string): Restricts access to posts/pages behind a password. Example: `accessGroup: trip-2026`. Admins configure password mappings.
+
+### Linking & Sharing
+
+- **`autoLinkHeading`** (boolean, default: `true`): When `true`, clickable link icons appear next to subheadings (h2, h3, etc.) on hover, allowing visitors to copy the link to that section.
+- **`autoLinkParagraph`** (boolean, default: `true`): When `true`, clickable link icons appear next to paragraphs when clicked, allowing visitors to copy the link to that paragraph.
+- **`share`** (array of strings or `false`): Controls which social platforms appear in share buttons. Example: `share: [twitter, facebook, linkedin]`. Set to `false` to hide sharing entirely.
+
+### Media & Metadata
+
+- **`heroImage`** (string): Path to a featured image. Use relative paths from the post folder, e.g., `./cover.jpg`. Appears at the top of the post and in social previews.
+- **`originalUrl`** (string): If reposting content, link to the original. Useful for canonicalization.
+
+### Pages-Only Fields
+
+- **`slug`** (string): For creating short URLs. Example: `slug: about` creates the page at `/about/`. Cannot contain leading/trailing slashes.
+- **`path`** (string): For creating nested URLs. Example: `path: privacy/policy` creates the page at `/privacy/policy/`. Cannot contain leading/trailing slashes. Cannot be used with `slug`.
+
+## Advanced
+
+### Using MDX (JavaScript in Markdown)
+
+MDX allows you to embed JSX components and JavaScript expressions directly in your markdown content. This is useful for interactive elements, custom layouts, or dynamic content.
+
+> **Note:** MDX files use the `.mdx` extension instead of `.md`. Simply rename your post folder to use `index.mdx` instead of `index.md`.
+
+#### Example: Embedding a Code Block with Syntax Highlighting
+
+```mdx
+export const highlight = (text) => `✨ ${text} ✨`;
+
+Here's some highlighted text: {highlight("Look at me!")}
+```
+
+#### Example: Using Custom Components
+
+If you want to embed custom HTML or use reusable components, you can use raw HTML or import components:
+
+```mdx
+<div class="callout-info my-6 rounded-lg border-l-4 px-4 py-3">
+  <strong>Tip:</strong> This is a callout box using Tailwind styling.
+</div>
+```
+
+Learn more about MDX: [MDX Documentation](https://docs.astro.build/en/guides/integrations-guide/mdx/)
+
+### Advanced Markdown Features
+
+#### Tables
+
+```md
+| Feature | Description |
+|---------|-------------|
+| **Bold** | Use `**text**` |
+| *Italic* | Use `*text*` |
+| `Code` | Use backticks |
+```
+
+#### Using HTML for Complex Layouts
+
+You can embed raw HTML for layouts that standard markdown cannot express:
+
+```md
+<div class="grid grid-cols-2 gap-4">
+  <div>Column 1</div>
+  <div>Column 2</div>
+</div>
+```
+
+#### Callout Boxes
+
+Use callout boxes to highlight important information:
+
+```html
+<div class="callout-warning my-6 rounded-lg border-l-4 px-4 py-3 not-prose">
+  <p class="m-0"><strong>Warning:</strong> This is important information.</p>
+</div>
+```
+
+Available callout types: `callout-info`, `callout-warning`, `callout-success`, `callout-error`.
+
+### Internal Linking
+
+Link to other posts and pages using relative paths:
+
+```md
+Read my [previous post](/entropy/my-earlier-post/) for context.
+
+Check out the [about page](/about/) for more information.
+```
+
+### Image Optimization
+
+Keep all images in the same folder as your `index.md` (or `index.mdx`) and reference them with relative paths:
+
+```md
+![A descriptive caption](./my-image.jpg)
+```
+
+The site automatically optimizes images for different screen sizes and formats. Use descriptive alt text for accessibility.
+
+### Responsive Images
+
+For more control, use HTML with Tailwind classes:
+
+```html
+<img 
+  src="./image.jpg" 
+  alt="Responsive image" 
+  class="w-full max-w-2xl mx-auto rounded-lg shadow-md"
+/>
+```
+
+### Multi-Author Posts
+
+You can mark a post as authored by multiple people:
+
+```yaml
+---
+title: "Collaboration"
+author:
+  - maj
+  - reg
+---
+```
+
+Both authors will be listed on the post with their respective profile information.
+
+### Using Draft and Unlisted Strategically
+
+- **`draft: true`**: Post is hidden from main site but visible at [next.majlovesreg.one](https://next.majlovesreg.one). Perfect for work-in-progress content.
+- **`unlisted: true`**: Post is hidden from listings and search but accessible via direct link. Useful for supplementary content or private shares.
+- **`accessGroup: "group-name"`**: Post requires a password to view. Ask admins to configure the password mapping.
+
+### Frontmatter Customization
+
+While the fields above are standard, you can add custom frontmatter fields for personal tracking or tooling:
+
+```yaml
+---
+title: "My Post"
+description: "Short summary"
+pubDate: 2026-03-28
+customField: "my-value"
+---
+```
+
+Custom fields won't affect the site but can be useful for personal organization.
