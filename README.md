@@ -15,8 +15,8 @@ This guide and template is for authors of [www.majlovesreg.one](https://www.majl
 - [Checklist](#checklist)
 - [Troubleshooting](#troubleshooting)
 - [Examples](#examples)
+- [Advanced use](#advanced)
 - [Frontmatter Reference](#frontmatter-reference)
-- [Advanced](#advanced)
 
 ## Step 1: Create a GitHub account
 
@@ -124,51 +124,7 @@ Notes:
 - `author` uses your author slug (not full name). Your personal slug will be created for you by majlovesreg.one admins, ask them about it.
 - Keep images in the same post folder and use relative paths like `./cover.jpg`.
 
-## Frontmatter Reference
-
-All blog posts and pages use YAML frontmatter (the metadata section at the top between `---` markers). Here are all available fields:
-
-### Required Fields
-
-- **`title`** (string): The title of your post or page. This appears in the browser tab, search results, and at the top of the page.
-- **`description`** (string): A short summary (1-2 sentences). Used in previews and social sharing.
-- **`pubDate`** (date): Publication date in `YYYY-MM-DD` format, e.g., `2026-03-28`.
-
-### Optional Common Fields
-
-- **`subtitle`** (string): A secondary headline shown below the title (blog posts only).
-- **`ogTitle`** (string): Custom title for social media sharing. Defaults to the title or `title—subtitle`.
-- **`ogDescription`** (string): Custom description for social media sharing. Defaults to description.
-
-### Content Organization
-
-- **`category`** (string): Blog category. Posts without a category appear under "entropy". Examples: `thoughts`, `life`, `love`.
-- **`tags`** (array of strings): List of tags for filtering and discovery. Example: `tags: [personal, travel, tech]`.
-- **`author`** (string or array): Author slug(s). Matches your author profile. Example: `author: maj` or `author: [maj, reg]`.
-
-### Content Control
-
-- **`draft`** (boolean, default: `false`): When `true`, the post/page only appears on the preview site ([next.majlovesreg.one](https://next.majlovesreg.one)), not the main site. Useful for work-in-progress.
-- **`unlisted`** (boolean, default: `false`): Post/page doesn't appear in listings, searches, or social sharing, but remains publicly accessible via direct link. Useful for occasional one-off content.
-- **`accessGroup`** (string): Restricts access to posts/pages behind a password. Example: `accessGroup: trip-2026`. Admins configure password mappings.
-
-### Linking & Sharing
-
-- **`autoLinkHeading`** (boolean, default: `true`): When `true`, clickable link icons appear next to subheadings (h2, h3, etc.) on hover, allowing visitors to copy the link to that section.
-- **`autoLinkParagraph`** (boolean, default: `true`): When `true`, clickable link icons appear next to paragraphs when clicked, allowing visitors to copy the link to that paragraph.
-- **`share`** (array of strings or `false`): Controls which social platforms appear in share buttons. Example: `share: [twitter, facebook, linkedin]`. Set to `false` to hide sharing entirely.
-
-### Media & Metadata
-
-- **`heroImage`** (string): Path to a featured image. Use relative paths from the post folder, e.g., `./cover.jpg`. Appears at the top of the post and in social previews.
-- **`originalUrl`** (string): If reposting content, link to the original. Useful for canonicalization.
-
-### Pages-Only Fields
-
-- **`slug`** (string): For creating short URLs. Example: `slug: about` creates the page at `/about/`. Cannot contain leading/trailing slashes.
-- **`path`** (string): For creating nested URLs. Example: `path: privacy/policy` creates the page at `/privacy/policy/`. Cannot contain leading/trailing slashes. Cannot be used with `slug`.
-
-## Advanced
+## Advanced use
 
 ### Using MDX (JavaScript in Markdown)
 
@@ -298,3 +254,47 @@ customField: "my-value"
 ```
 
 Custom fields won't affect the site but can be useful for personal organization.
+
+## Frontmatter Reference
+
+All blog posts and pages use YAML frontmatter (the metadata section at the top between `---` markers). Here are all available fields:
+
+### Required Fields
+
+- **`title`** (string): The title of your post or page. This appears in the browser tab, search results, and at the top of the page.
+- **`description`** (string): A short summary (1-2 sentences). Used in previews and social sharing.
+- **`pubDate`** (date): Publication date in `YYYY-MM-DD` format, e.g., `2026-03-28`.
+
+### Optional Common Fields
+
+- **`subtitle`** (string): A secondary headline shown below the title (blog posts only).
+- **`ogTitle`** (string): Custom title for social media sharing. Defaults to the title or `title—subtitle`.
+- **`ogDescription`** (string): Custom description for social media sharing. Defaults to description.
+
+### Content Organization
+
+- **`category`** (string): Blog category. Posts without a category appear under "entropy". Examples: `thoughts`, `life`, `love`.
+- **`slug`** (string): For creating custom post URLs. Example: `slug: about` creates the page at `/<category>/about/`. Cannot contain leading/trailing slashes.
+- **`tags`** (array of strings): List of tags for filtering and discovery. Example: `tags: [personal, travel, tech]`.
+- **`author`** (string or array): Author slug(s). Matches your author profile. Example: `author: maj` or `author: [maj, reg]`.
+
+### Content Control
+
+- **`draft`** (boolean, default: `false`): When `true`, the post/page only appears on the preview site ([next.majlovesreg.one](https://next.majlovesreg.one)), not the main site. Useful for work-in-progress.
+- **`unlisted`** (boolean, default: `false`): Post/page doesn't appear in listings, searches, or social sharing, but remains publicly accessible via direct link. Useful for occasional one-off content.
+- **`accessGroup`** (string): Restricts access to posts/pages behind a password. Example: `accessGroup: trip-2026`. Admins configure password mappings.
+
+### Linking & Sharing
+
+- **`autoLinkHeading`** (boolean, default: `true`): When `true`, clickable link icons appear next to subheadings (h2, h3, etc.) on hover, allowing visitors to copy the link to that section.
+- **`autoLinkParagraph`** (boolean, default: `true`): When `true`, clickable link icons appear next to paragraphs when clicked, allowing visitors to copy the link to that paragraph.
+- **`share`** (array of strings or `false`): Controls which social platforms appear in share buttons. Example: `share: [twitter, facebook, linkedin]`. Set to `false` to hide sharing entirely.
+
+### Media & Metadata
+
+- **`heroImage`** (string): Path to a featured image. Use relative paths from the post folder, e.g., `./cover.jpg`. Appears at the top of the post and in social previews.
+- **`originalUrl`** (string): If reposting content, link to the original. Useful for canonicalization.
+
+### Pages-Only Fields
+
+- **`path`** (string): For creating nested URLs. Example: `path: privacy/policy` creates the page at `/privacy/policy/`. Cannot contain leading/trailing slashes. Cannot be used with `slug`.
