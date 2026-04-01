@@ -15,7 +15,7 @@ This guide and template is for authors of [www.majlovesreg.one](https://www.majl
 - [Checklist](#checklist)
 - [Troubleshooting](#troubleshooting)
 - [Examples](#examples)
-- [Advanced use](#advanced)
+- [Advanced use](#advanced-use)
 - [Frontmatter Reference](#frontmatter-reference)
 
 ## Step 1: Create a GitHub account
